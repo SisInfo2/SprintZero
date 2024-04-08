@@ -4,9 +4,14 @@
  */
 package frutas;
 
+import java.awt.GridLayout;
+
 import java.awt.Color;
-import javax.swing.ImageIcon;
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTable;
 
 /**
  *
@@ -22,10 +27,22 @@ public class MyFrame {
 //        frame.setSize(1920,1080); 
         frame.setVisible(true); 
   
-        ImageIcon image = new ImageIcon("logo.png"); 
-        frame.setIconImage(image.getImage()); 
+//        ImageIcon image = new ImageIcon("logo.png"); 
+//        frame.setIconImage(image.getImage()); 
         frame.getContentPane().setBackground(new Color(0xf9f8fa));
         
+        
+        frame.setLayout(new FlowLayout(FlowLayout.CENTER));
+        
+        
+        JPanel panel = new JPanel(new GridLayout(4,10,0,0));
+        panel.setBackground(new Color(0xff0000));
+        panel.setPreferredSize(new Dimension(500,1000));
+        
+        JTable table = new JTable
+        
+        
+        frame.add(panel);
         
         
         
