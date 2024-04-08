@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 public class MyFrame {
     MyFrame(){
         JFrame frame = new JFrame(); 
-        frame.setTitle("JFrame title goes here"); 
+        frame.setTitle("Frutas"); 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 //        frame.setResizable(false); 
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -24,6 +24,10 @@ public class MyFrame {
   
         ImageIcon image = new ImageIcon("logo.png"); 
         frame.setIconImage(image.getImage()); 
-        frame.getContentPane().setBackground(new Color(0xf9f8fa)); 
+        frame.getContentPane().setBackground(new Color(0xf9f8fa));
+        
+        
+        
+        
     }
 }
