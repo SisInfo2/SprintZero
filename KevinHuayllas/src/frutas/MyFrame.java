@@ -4,12 +4,15 @@
  */
 package frutas;
 
+import java.awt.Button;
 import java.awt.GridLayout;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
@@ -18,6 +21,8 @@ import javax.swing.JTable;
  * @author TUF
  */
 public class MyFrame {
+    JPanel panel;
+    
     MyFrame(){
         JFrame frame = new JFrame(); 
         frame.setTitle("Frutas"); 
@@ -35,16 +40,40 @@ public class MyFrame {
         frame.setLayout(new FlowLayout(FlowLayout.CENTER));
         
         
-        JPanel panel = new JPanel(new GridLayout(4,10,0,0));
-        panel.setBackground(new Color(0xff0000));
-        panel.setPreferredSize(new Dimension(500,1000));
+        panel = new JPanel(new GridLayout(4,4,0,0));
+        panel.setBackground(new Color(0xfccccc));
+        panel.setPreferredSize(new Dimension(600, 100));
+        frame.add(panel); 
         
-        JTable table = new JTable
+        TablaFrutas tabla = new TablaFrutas();
         
+        frame.add(tabla.getTable());
+        frame.add(tabla.getButton());
+        frame.add(new Button("Hola"));
+    }
+    
+    
+    public void agregarColumna(Color color){
+        JPanel newPanel = new JPanel();
+        newPanel.setBackground(color);
+        newPanel.setSize(10,100);
+        JPanel newPane2 = new JPanel();
+        newPane2.setBackground(color.PINK);
+        newPane2.setSize(10,100);
+        JPanel newPane3 = new JPanel();
+        newPane3.setBackground(color);
+        newPane3.setSize(10,100);
+        JPanel newPane4 = new JPanel();
+        newPane4.setBackground(color.RED);
+        newPane4.setSize(10,100);
+//        this.panel.add(new Button("1"));
+//        this.panel.add(new Button("2"));
+//        this.panel.add(new Button("3"));
+        this.panel.add(newPanel);
+        this.panel.add(newPane2);
+        this.panel.add(newPane3);
+        this.panel.add(newPane4);
         
-        frame.add(panel);
-        
-        
-        
+        panel.setPreferredSize(panel.getPreferredSize());
     }
 }
